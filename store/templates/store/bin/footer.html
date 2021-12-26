@@ -1,0 +1,41 @@
+{% load static %}
+<div class="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6 col-md-4 col-xs-12 footer_menu">
+				<h3>Контакты</h3>
+				<ul>
+					<li class="footer_contact">
+						<i class="fa fa-phone"></i>
+						<p> 821 241 414 </p>
+					</li>
+					<li class="footer_contact">
+						<i class="fa fa-envelope"></i>
+						<p> root@mail.ru </p>
+					</li>
+					<li class="footer_contact">
+						<i class="fa fa-map-marker"></i>
+						<p>Екатеринбург</p>
+					</li>
+				</ul>
+			</div>
+		 
+<!--			 <div class="col-sm-6 col-md-4 col-xs-12 footer_menu">-->
+<!--				<h3>Menu</h3>-->
+<!--				<ul>-->
+<!--					<li class="footer_menu">-->
+<!--						<a href="{% url 'store:books' %}"><i class="fa fa-angle-right"></i>Books</a>-->
+<!--					</li>-->
+<!--				</ul>-->
+<!--			</div>-->
+<!--			-->
+			<div class="col-sm-6 col-md-4 col-xs-12 footer_news" style = "margin: 0px 160px">
+				<h3>Мы принимаем оплату через!</h3>
+				<div class="footer_paymentmethod">
+					<img src="{% static 'images/visa.png' %}" alt="" />
+					<img src="{% static 'images/msc.png' %}" alt="" />
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

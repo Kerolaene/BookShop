@@ -1,0 +1,8 @@
+{% load customfunction %}
+<ul class="list-group">
+	<li class="list-group-item d-flex justify-content-between align-items-center"><h4>Сумма заказа</h4></li>
+	<li class="list-group-item d-flex justify-content-between align-items-center">Книги<span>{{ cart|length }}</span></li>
+	<li class="list-group-item d-flex justify-content-between align-items-center">Количетсво<span>{{ cart.get_total_price }} $.</span></li>
+	<li class="list-group-item d-flex justify-content-between align-items-center">Доставка<span>{{ cost|shipping }} $.</span></li>
+	<li class="list-group-item d-flex justify-content-between align-items-center">Общая сумма<span>{{ cart.get_total_price|payabletotal}} $.</span></li>
+</ul>	

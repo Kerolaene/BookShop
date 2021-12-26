@@ -1,0 +1,26 @@
+{% extends 'store/base.html' %}
+{% load static %}
+
+{% block container %}
+        <div class="row">
+            <div class="col-md-12 cart_info">
+                    <div class="successful-order text-center">
+                        <i class="fa fa-check"></i>
+                        <h3 class="page-header">Спасибо вам за вашу покупку!</h3>
+                    </div>
+                    <div class="ordered-info">
+                        <h5>OrderID: <span>#2018{{ order.id }}</span></h5>
+                        <h5>Книга: <span>{{ order.totalbook }}</span></h5>
+                        <h5>Имя: <span>{{ order.name }}</span></h5>
+                        <h5>Телефон: <span>{{ order.phone }}</span></h5>
+                        <h5>Email: <span>{{ order.email }}</span></h5>
+                        <h5>Номер учетной записи: <span>{{ order.account_no }}</span></h5>
+                        <h5>Способ оплаты: <span>{{ order.payment_method }}</span></h5>
+                        <h5>Адрес доставки: <span>{{ order.division }}:{{ order.zip_code }}, {{ order.district }}, {{ order.address }}</span></h5>
+                    </div>
+                    <div class="download-info">
+                        <a href="{% url 'order:pdf' id=order.id %}"><i class="fa fa-download" aria-hidden="true"></i></a>
+                    </div>
+            </div>
+        </div>
+{% endblock %}
