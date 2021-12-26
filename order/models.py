@@ -14,7 +14,7 @@ class Order(models.Model):
 	zip_code = models.CharField(max_length=30)
 	payment_method = models.CharField(max_length = 20)
 	account_no = models.CharField(max_length = 20)
-	transaction_id = models.IntegerField()
+	transaction_id = models.PositiveIntegerField(default=1)
 	payable = models.IntegerField()
 	totalbook = models.IntegerField()
 	created = models.DateTimeField(auto_now_add=True)
